@@ -2,13 +2,13 @@ import json
 
 # open U.S. data file
 f_us = open('US.txt','r',encoding='utf-8')
-US = f_us.read()
+us = f_us.read()
 # open Japan data file
 f_jp = open('JP.txt','r',encoding='utf-8')
-JP = f_jp.read()
+jp = f_jp.read()
 # open India data file
 f_in = open('IN.txt','r',encoding='utf-8')
-IN = f_in.read()
+ind = f_in.read()
 
 def get_trend(country):
     # get rid of inconsistent characters at the start and the end for the country's data
@@ -24,15 +24,15 @@ first, use array slicing to select data in 2020
 x axis is the date (in 2020)
 y axis is the number of people tested positive on each date (in 2020)
 '''
-us_data_trend = get_trend(US)
+us_data_trend = get_trend(us)
 us_xaxis = us_data_trend['updateDate'][:314]
 us_yaxis = us_data_trend['list'][0]['data'][:314]
 
-jp_data_trend = get_trend(JP)
+jp_data_trend = get_trend(jp)
 jp_xaxis = jp_data_trend['updateDate'][:315]
 jp_yaxis = jp_data_trend['list'][0]['data'][:315]
 
-in_data_trend = get_trend(IN)
+in_data_trend = get_trend(ind)
 in_xaxis = in_data_trend['updateDate'][:269]
 in_yaxis = in_data_trend['list'][0]['data'][:269]
 
