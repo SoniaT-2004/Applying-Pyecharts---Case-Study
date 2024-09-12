@@ -6,7 +6,7 @@ US = f_us.read()
 # open Japan data file
 f_jp = open('JP.txt','r',encoding='utf-8')
 JP = f_jp.read()
-# open Indian data file
+# open India data file
 f_in = open('IN.txt','r',encoding='utf-8')
 IN = f_in.read()
 
