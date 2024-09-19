@@ -37,26 +37,26 @@ in_xaxis = in_data_trend['updateDate'][:269]
 in_yaxis = in_data_trend['list'][0]['data'][:269]
 
 # plot graph
+from pyecharts import options as opts
 from pyecharts.charts import Line
+
 line = Line()
+
 # add x_axis data
 line.add_xaxis(us_xaxis)
 line.add_xaxis(jp_xaxis)
 line.add_xaxis(in_xaxis)
 # add y_axis data
-line.add_yaxis("U.S.", us_yaxis)
-line.add_yaxis("Japan", jp_yaxis)
-line.add_yaxis("India", in_yaxis)
+line.add_yaxis("U.S.", us_yaxis, label_opts = opts.LabelOpts(is_show=False))
+line.add_yaxis("Japan", jp_yaxis, label_opts = opts.LabelOpts(is_show=False))
+line.add_yaxis("India", in_yaxis, label_opts = opts.LabelOpts(is_show=False))
 
-# import options
-from pyecharts import options as opts
 line.set_global_opts(
     title_opts = opts.TitleOpts(title="COVID 19 Data - Population Tested Positive Each Day in 2020", pos_left="center", pos_top="0%"),
     legend_opts = opts.LegendOpts(is_show=True, pos_right="right", pos_top="20%"),
     toolbox_opts = opts.ToolboxOpts(is_show=True),
 )
 
-# use render
 line.render()
 
 # close files
