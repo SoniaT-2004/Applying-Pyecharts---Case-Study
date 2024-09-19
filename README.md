@@ -4,7 +4,8 @@
 💡 This code uses pyecharts modules to analyze the population tested positive each day in 2020 in each of the three countries.
 
 📈 Line graph generated:
-  <img width="1212" alt="Screenshot 2024-09-12 at 17 25 57" src="https://github.com/user-attachments/assets/e05fc152-4ea7-4576-80a3-b067a5adfaa5">
+  <img width="853" alt="plot" src="https://github.com/user-attachments/assets/5db2d8da-d9cb-4155-9592-c9744d09a68c">
+
 
 🚀　I also want to introduce some great websites that help analyze json data:
 - https://www.bejson.com/
